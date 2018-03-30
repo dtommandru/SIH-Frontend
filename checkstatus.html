@@ -15,10 +15,12 @@
 
     <!-- Custom styles for this template -->
     <link href="css/modern-business.css" rel="stylesheet">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
 
   </head>
 
-  <body >
+  <body>
 
     <!-- Navigation -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-danger fixed-top">
@@ -57,71 +59,58 @@
 
 
     <!-- Page Content -->
-    <div class="container bg-red">
-
-      <!-- Page Heading/Breadcrumbs -->
-      <h1 class="mt-4 mb-3">Contact
-      </h1>
-
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-          <a href="index.html">Home</a>
-        </li>
-        <li class="breadcrumb-item active">Contact</li>
-      </ol>
-
-      <!-- Content Row -->
-      <div class="row">
-        <!-- Map Column -->
-        <div class="col-lg-12 mb-4">
-          <!-- Embedded Google Map -->
-          <div id="map" style="width:100%;height:500px"></div>
-          <script>
-                  function initMap() {
-                  var uluru = {lat :28.6317712,lng :77.2220944};
-                  var map = new google.maps.Map(document.getElementById('map'), {
-                  zoom: 4,
-                  center: uluru
-                  });
-                  var marker = new google.maps.Marker({
-                  position: uluru,
-                  map: map
-                  });
-                  }
-          </script>
-          <script async defer
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAB-IUa3sZEcPHxXL5zydsWEU-bFNOCG4&callback=initMap">
-          </script>
-
-
-          </div>
-        <!-- Contact Details Column -->
-
       <!-- /.row -->
-
-      <!-- Contact Form -->
-
+      <!-- Features Section -->
       <!-- /.row -->
+  <br />
 
-    </div>
-    <!-- /.container -->
-
-    <!-- Footer -->
-    <footer class="py-5 bg-danger">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Delhi Fire Services 2018</p>
+  <div class="container-fluid col-lg-6">
+    <form>
+   <div class="form-group">
+     <label for="exampleInputEmail1">Application ID</label>
+     <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter ApplicationID">
+     <small id="emailHelp" class="form-text text-muted">Enter the ID You are given in the mail</small>
+   </div>
+   <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#exampleModal">Check Status</button>
+ </form>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Application Status</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
-      <!-- /.container -->
-    </footer>
+      <div class="modal-body bg-success">
+         Status: Approved
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <!-- Call to Action Section -->
+
+
+     <!-- /.container -->
+    <br />
+    <!-- Footer -->
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+      $("#menu-toggle").click(function(e) {
+          e.preventDefault();
+          $("#wrapper").toggleClass("toggled");
+       });
+   </script>
 
-    <!-- Contact form JavaScript -->
-    <!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
 
   </body>
 
